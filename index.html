@@ -19,11 +19,11 @@
   overflow:hidden;
   position:fixed;
 }
-/** for debugging
+
 tw-sidebar {
   display: none;
 }
-**/
+
 img {
   max-width: 50vw;
   height: auto;
@@ -89,7 +89,7 @@ hunger {
   background-color: white;
   border-width: 2px;
   border-bottom-style: solid;
-  border-color: #464941;
+  border-color: #9a9a9a;
   font-size: 120%;
   position: fixed;
   top: 0;
@@ -106,7 +106,7 @@ health {
   background-color: white;
   border-width: 2px;
   border-bottom-style: solid;
-  border-color: #464941;
+  border-color: #9a9a9a;
   font-size: 120%;
   position: fixed;
   top: 0;
@@ -122,7 +122,7 @@ week {
   background-color: #e7782e;
   border-width: 2px;
   border-bottom-style: solid;
-  border-color: #464941;
+  border-color: #9a9a9a;
   color: white;
   font-size: 140%;
   position: fixed;
@@ -139,7 +139,7 @@ budget {
   background-color: #52672e;
   border-width: 2px;
   border-bottom-style: solid;
-  border-color: #263015;
+  border-color: #9a9a9a;
   color: white;
   font-size: 130%;
   position: fixed;
@@ -173,6 +173,18 @@ first {
   width: 42vw;
   min-width: 42vw;
   height: auto;
+  position: fixed;
+  left: 4vw;
+  top: calc(50vh - 11vw); 
+  border: 9px outset #d4d4d4;
+}
+
+blackScreen {
+  display: block;
+  background-color: black;
+  width: 42vw;
+  min-width: 42vw;
+  height: 30vw;
   position: fixed;
   left: 4vw;
   top: calc(50vh - 11vw); 
@@ -212,11 +224,11 @@ first {
 &lt;health&gt;&lt;img src=&quot;healthIcon.png&quot; style=&quot;width:3vw&quot;;&gt;:$health%&lt;/health&gt;
 
 &lt;budget&gt;Budget: $**$budget**&lt;/budget&gt;</tw-passagedata><tw-passagedata pid="4" name="Intro2" tags="" position="209,991.6666666666667" size="100,100">Suddenly, you hear a loud -CRACK-
-You bolt up on the couch and lock eyes with a man dressed in an impeccable white suit.
+You bolt up on the couch and lock eyes on an unassuming man wearing a tshirt and... holding //kale//?
 
 [[Scream for help]] [[Throw the nearest object at him]] 
 
-&lt;img src=&quot;media/pic1.jpg&quot; alt=&quot;pic1&quot; class=&quot;scenePic&quot;&gt;
+&lt;img src=&quot;media/man1.jpg&quot; alt=&quot;pic1&quot; class=&quot;scenePic&quot;&gt;
 
 &lt;week&gt;Week 0&lt;/week&gt;
 
@@ -224,11 +236,11 @@ You bolt up on the couch and lock eyes with a man dressed in an impeccable white
 
 &lt;health&gt;&lt;img src=&quot;healthIcon.png&quot; style=&quot;width:3vw&quot;;&gt;:$health%&lt;/health&gt;
 
-&lt;budget&gt;Budget: $**$budget**&lt;/budget&gt;</tw-passagedata><tw-passagedata pid="5" name="Scream for help" tags="" position="124.66666666666667,1133" size="100,100">You start to form the words, but the man in white snaps his fingers and your voice fizzles out.
+&lt;budget&gt;Budget: $**$budget**&lt;/budget&gt;</tw-passagedata><tw-passagedata pid="5" name="Scream for help" tags="" position="124.66666666666667,1133" size="100,100">You start to form the words, but the man snaps his fingers and your voice fizzles out.
 
 [[He seems to grin in amusement]]
 
-&lt;img src=&quot;media/pic1.jpg&quot; alt=&quot;pic1&quot; class=&quot;scenePic&quot;&gt;
+&lt;img src=&quot;media/man1.jpg&quot; alt=&quot;pic1&quot; class=&quot;scenePic&quot;&gt;
 
 &lt;week&gt;Week 0&lt;/week&gt;
 
@@ -240,7 +252,7 @@ You bolt up on the couch and lock eyes with a man dressed in an impeccable white
 
 [[He seems to grin in amusement]] 
 
-&lt;img src=&quot;media/pic1.jpg&quot; alt=&quot;pic1&quot; class=&quot;scenePic&quot;&gt;
+&lt;img src=&quot;media/man2.jpg&quot; alt=&quot;pic1&quot; class=&quot;scenePic&quot;&gt;
 
 &lt;week&gt;Week 0&lt;/week&gt;
 
@@ -252,7 +264,7 @@ You bolt up on the couch and lock eyes with a man dressed in an impeccable white
 
 [[&quot;...Help me?&quot;-&gt;Intro3]] [[&quot;I&#39;m all good on help, thanks.&quot;-&gt;Intro3]]
 
-&lt;img src=&quot;media/pic1.jpg&quot; alt=&quot;pic1&quot; class=&quot;scenePic&quot;&gt;
+&lt;img src=&quot;media/man1.jpg&quot; alt=&quot;pic1&quot; class=&quot;scenePic&quot;&gt;
 
 &lt;week&gt;Week 0&lt;/week&gt;
 
@@ -266,7 +278,7 @@ You think to yourself, &quot;I guess I don&#39;t really have a choice huh?&quot;
 
 [[No-&gt;BeginGame]] [[Nope-&gt;BeginGame]]
 
-&lt;img src=&quot;media/pic1.jpg&quot; alt=&quot;pic1&quot; class=&quot;scenePic&quot;&gt;
+&lt;img src=&quot;media/man1.jpg&quot; alt=&quot;pic1&quot; class=&quot;scenePic&quot;&gt;
 
 &lt;week&gt;Week 0&lt;/week&gt;
 
@@ -280,7 +292,7 @@ Before you can object the Guide taps a gloved thumb on your forehead and your vi
 
 [[&lt;font size=&quot;-10&quot;&gt;Jessica  &lt;/font&gt;Jessica!  &lt;font size=&quot;+3&quot;&gt;JESSICA!&lt;/font&gt;-&gt;Jess1]]
 
-&lt;img src=&quot;media/pic1.jpg&quot; alt=&quot;pic1&quot; class=&quot;scenePic&quot;&gt;
+&lt;blackScreen&gt;&lt;/blackScreen&gt;
 
 &lt;week&gt;Week 0&lt;/week&gt;
 
@@ -300,6 +312,8 @@ You hear the snide giggling of children around you.
 (set: $budget to 1)
 (set: $statChange to (transition:&quot;pulse&quot;))
 
+&lt;img src=&quot;media/pic1.jpg&quot; alt=&quot;pic1&quot; class=&quot;scenePic&quot;&gt;
+
 &lt;week&gt;Week 1&lt;/week&gt;
 
 &lt;hunger&gt;&lt;img src=&quot;hungerIcon.png&quot; style=&quot;width:3vw&quot;;&gt;$statChange[:$hunger%]&lt;/hunger&gt;
@@ -312,6 +326,8 @@ You hear the snide giggling of children around you.
 
 [[You feel her memories mixing with yours-&gt;Jess4]]
 
+&lt;img src=&quot;media/pic1.jpg&quot; alt=&quot;pic1&quot; class=&quot;scenePic&quot;&gt;
+
 &lt;week&gt;Week 1&lt;/week&gt;
 
 &lt;hunger&gt;&lt;img src=&quot;hungerIcon.png&quot; style=&quot;width:3vw&quot;;&gt;:$hunger%&lt;/hunger&gt;
@@ -322,6 +338,8 @@ You hear the snide giggling of children around you.
 
 [[Check your desk for snacks-&gt;Jess5]] [[Check your backpack for snacks-&gt;Jess5]]
 
+&lt;img src=&quot;media/pic1.jpg&quot; alt=&quot;pic1&quot; class=&quot;scenePic&quot;&gt;
+
 &lt;week&gt;Week 1&lt;/week&gt;
 
 &lt;hunger&gt;&lt;img src=&quot;hungerIcon.png&quot; style=&quot;width:3vw&quot;;&gt;:$hunger%&lt;/hunger&gt;
@@ -331,6 +349,8 @@ You hear the snide giggling of children around you.
 &lt;budget&gt;Budget: $**$budget**&lt;/budget&gt;</tw-passagedata><tw-passagedata pid="13" name="Jess5" tags="" position="848,777" size="100,100">You rummage through books and notes to find an old, dusty, half-eaten (either:&quot;candy bar&quot;,&quot;bag of chips&quot;).
 
 [[Eat it (+Food -Health)]] [[Not worth it]]
+
+&lt;img src=&quot;media/pic1.jpg&quot; alt=&quot;pic1&quot; class=&quot;scenePic&quot;&gt;
 
 &lt;week&gt;Week 1&lt;/week&gt;
 
@@ -344,6 +364,8 @@ You hear the snide giggling of children around you.
 
 (set: $temp1 to $hunger + 3)
 (set: $temp2 to $health - 10)
+
+&lt;img src=&quot;media/pic1.jpg&quot; alt=&quot;pic1&quot; class=&quot;scenePic&quot;&gt;
 
 &lt;week&gt;Week 1&lt;/week&gt;
 
@@ -370,6 +392,8 @@ You hear the snide giggling of children around you.
 
 [[Back to History-&gt;Jess7]]
 
+&lt;img src=&quot;media/pic1.jpg&quot; alt=&quot;pic1&quot; class=&quot;scenePic&quot;&gt;
+
 &lt;week&gt;Week 1&lt;/week&gt;
 
 &lt;hunger&gt;&lt;img src=&quot;hungerIcon.png&quot; style=&quot;width:3vw&quot;;&gt;$statChange[:$hunger%]&lt;/hunger&gt;
@@ -381,6 +405,8 @@ You hear the snide giggling of children around you.
 &quot;Let&#39;s see if you were paying attention, Jessica: How many people in San Diego experience **food insecurity**?
 
 [[&quot;50,000?&quot;]] [[&quot;500,000?&quot;]]
+
+&lt;img src=&quot;media/pic1.jpg&quot; alt=&quot;pic1&quot; class=&quot;scenePic&quot;&gt;
 
 Guide Whispers: **Food Insecurity** is defined as not having consistent access to nutritious food.
 
@@ -395,6 +421,8 @@ Guide Whispers: **Food Insecurity** is defined as not having consistent access t
 
 [[Head home]]
 
+&lt;img src=&quot;media/pic1.jpg&quot; alt=&quot;pic1&quot; class=&quot;scenePic&quot;&gt;
+
 &lt;week&gt;Week 1&lt;/week&gt;
 
 &lt;hunger&gt;&lt;img src=&quot;hungerIcon.png&quot; style=&quot;width:3vw&quot;;&gt;:$hunger%&lt;/hunger&gt;
@@ -407,6 +435,8 @@ Let&#39;s try to keep your eyes on the board next class,&quot; she added as she 
 
 [[Head home]]
 
+&lt;img src=&quot;media/pic1.jpg&quot; alt=&quot;pic1&quot; class=&quot;scenePic&quot;&gt;
+
 &lt;week&gt;Week 1&lt;/week&gt;
 
 &lt;hunger&gt;&lt;img src=&quot;hungerIcon.png&quot; style=&quot;width:3vw&quot;;&gt;:$hunger%&lt;/hunger&gt;
@@ -416,6 +446,8 @@ Let&#39;s try to keep your eyes on the board next class,&quot; she added as she 
 &lt;budget&gt;Budget: $**$budget**&lt;/budget&gt;</tw-passagedata><tw-passagedata pid="19" name="Head home" tags="" position="848,1400" size="100,100">Your mother was just on her way out for her next shift. &quot;Honey, go ahead and split that last box of mac &amp; cheese with your sister please.&quot;
 
 [[Take a look in the pantry]]
+
+&lt;img src=&quot;media/pic1.jpg&quot; alt=&quot;pic1&quot; class=&quot;scenePic&quot;&gt;
 
 &lt;week&gt;Week 1&lt;/week&gt;
 
@@ -429,6 +461,8 @@ You start to wonder what your parents will eat when they come home.
 
 [[Leave half for them (-Food -Health)]] [[Eat your half (+Food -Health)]]
 
+&lt;img src=&quot;media/pic1.jpg&quot; alt=&quot;pic1&quot; class=&quot;scenePic&quot;&gt;
+
 &lt;week&gt;Week 1&lt;/week&gt;
 
 &lt;hunger&gt;&lt;img src=&quot;hungerIcon.png&quot; style=&quot;width:3vw&quot;;&gt;:$hunger%&lt;/hunger&gt;
@@ -441,6 +475,8 @@ You start to wonder what your parents will eat when they come home.
 
 (set: $temp1 to $hunger - 10)
 (set: $temp2 to $health - 10)
+
+&lt;img src=&quot;media/pic1.jpg&quot; alt=&quot;pic1&quot; class=&quot;scenePic&quot;&gt;
 
 &lt;week&gt;Week 1&lt;/week&gt;
 
@@ -470,6 +506,8 @@ You start to wonder what your parents will eat when they come home.
 (set: $temp1 to $hunger + 10)
 (set: $temp2 to $health - 10)
 
+&lt;img src=&quot;media/pic1.jpg&quot; alt=&quot;pic1&quot; class=&quot;scenePic&quot;&gt;
+
 &lt;week&gt;Week 1&lt;/week&gt;
 
 &lt;hunger&gt;&lt;img src=&quot;hungerIcon.png&quot; style=&quot;width:3vw&quot;;&gt;:|stat1&gt;[$hunger]%&lt;font color=&quot;green&quot;&gt;|change1&gt;[+10%]&lt;/font&gt;&lt;/hunger&gt;
@@ -497,6 +535,8 @@ You think of something to take her mind off it.
 
 [[Play some games (-Health)]] [[Watch TV (-Health)]]
 
+&lt;img src=&quot;media/pic1.jpg&quot; alt=&quot;pic1&quot; class=&quot;scenePic&quot;&gt;
+
 &lt;week&gt;Week 1&lt;/week&gt;
 
 &lt;hunger&gt;&lt;img src=&quot;hungerIcon.png&quot; style=&quot;width:3vw&quot;;&gt;:$hunger%&lt;/hunger&gt;
@@ -510,6 +550,8 @@ You think of something to take her mind off it.
 Guide Whispers: Remember what your teacher said about food insecurity? That number jumps up to **1 in 6** for children.
 
 (set: $temp2 to $health - 5)
+
+&lt;img src=&quot;media/pic1.jpg&quot; alt=&quot;pic1&quot; class=&quot;scenePic&quot;&gt;
 
 &lt;week&gt;Week 1&lt;/week&gt;
 
@@ -534,6 +576,8 @@ Guide Whispers: Remember what your teacher said about food insecurity? That numb
 
 (set: $temp2 to $health - 5)
 
+&lt;img src=&quot;media/pic1.jpg&quot; alt=&quot;pic1&quot; class=&quot;scenePic&quot;&gt;
+
 &lt;week&gt;Week 1&lt;/week&gt;
 
 &lt;hunger&gt;&lt;img src=&quot;hungerIcon.png&quot; style=&quot;width:3vw&quot;;&gt;:$hunger%&lt;/hunger&gt;
@@ -555,6 +599,8 @@ Guide Whispers: Remember what your teacher said about food insecurity? That numb
 
 (set: $temp2 to $health + 10)
 
+&lt;img src=&quot;media/pic1.jpg&quot; alt=&quot;pic1&quot; class=&quot;scenePic&quot;&gt;
+
 &lt;week&gt;Week 1&lt;/week&gt;
 
 &lt;hunger&gt;&lt;img src=&quot;hungerIcon.png&quot; style=&quot;width:3vw&quot;;&gt;:$hunger%&lt;/hunger&gt;
@@ -575,6 +621,8 @@ Guide Whispers: Remember what your teacher said about food insecurity? That numb
 
 [[Run home with the good news-&gt;Jess9]]
 
+&lt;img src=&quot;media/pic1.jpg&quot; alt=&quot;pic1&quot; class=&quot;scenePic&quot;&gt;
+
 &lt;week&gt;Week 1&lt;/week&gt;
 
 &lt;hunger&gt;&lt;img src=&quot;hungerIcon.png&quot; style=&quot;width:3vw&quot;;&gt;:$hunger%&lt;/hunger&gt;
@@ -586,6 +634,8 @@ Guide Whispers: Remember what your teacher said about food insecurity? That numb
 For the first time in a while, they ask what you would like for dinner.
 
 [[Chicken &amp; sweet potatoes (++Food ++Health)]] [[Egg &amp; veggie fried rice (++Food ++Health)]]
+
+&lt;img src=&quot;media/pic1.jpg&quot; alt=&quot;pic1&quot; class=&quot;scenePic&quot;&gt;
 
 &lt;week&gt;Week 1&lt;/week&gt;
 
@@ -601,6 +651,8 @@ Guide Whispers: The School Pantry program has been implemented in more than 40 s
 
 (set: $temp1 to $hunger + 30)
 (set: $temp2 to $health + 30)
+
+&lt;img src=&quot;media/pic1.jpg&quot; alt=&quot;pic1&quot; class=&quot;scenePic&quot;&gt;
 
 &lt;week&gt;Week 1&lt;/week&gt;
 
@@ -632,6 +684,8 @@ Guide Whispers: The School Pantry program has been implemented in more than 40 s
 (set: $temp1 to $hunger + 30)
 (set: $temp2 to $health + 30)
 
+&lt;img src=&quot;media/pic1.jpg&quot; alt=&quot;pic1&quot; class=&quot;scenePic&quot;&gt;
+
 &lt;week&gt;Week 1&lt;/week&gt;
 
 &lt;hunger&gt;&lt;img src=&quot;hungerIcon.png&quot; style=&quot;width:3vw&quot;;&gt;:|stat1&gt;[$hunger]%&lt;font color=&quot;green&quot;&gt;|change1&gt;[+30%]&lt;/font&gt;&lt;/hunger&gt;
@@ -659,6 +713,8 @@ Lets grab a snack from your bag.
 
 [[Apple slices (+Food +Health)-&gt;JessFinal]] [[Granola bar (+Food +Health)-&gt;JessFinal]]
 
+&lt;img src=&quot;media/pic1.jpg&quot; alt=&quot;pic1&quot; class=&quot;scenePic&quot;&gt;
+
 &lt;week&gt;Week 1&lt;/week&gt;
 
 &lt;hunger&gt;&lt;img src=&quot;hungerIcon.png&quot; style=&quot;width:3vw&quot;;&gt;:$hunger%&lt;/hunger&gt;
@@ -672,6 +728,8 @@ He asks you why your performance has been slipping lately.
 [[Tell him you&#39;re not feeling well-&gt;JessExpl]] [[Explain &amp; ask him for help-&gt;Jess8]]
 
 (set: $temp1 to $hunger - 7)
+
+&lt;img src=&quot;media/pic1.jpg&quot; alt=&quot;pic1&quot; class=&quot;scenePic&quot;&gt;
 
 &lt;week&gt;Week 1&lt;/week&gt;
 
@@ -690,13 +748,15 @@ He asks you why your performance has been slipping lately.
 ]
 (live: 2s)[(replace: ?change1)[](stop:)]</tw-passagedata><tw-passagedata pid="33" name="JessFinal" tags="" position="842.6666666666666,3033.6666666666665" size="100,100">You sneak a quick bite, then turn your attention back to the class and continue taking notes.
 
-After class a familiar man in white greets you.
+After class a familiar man in dark shades greets you.
 &quot;Looks like you&#39;re getting the hang of this already. Ready to move on?&quot;
 
 [[&quot;There&#39;s more?!&quot;]] [[&quot;Can&#39;t wait&quot;]]
 
 (set: $temp1 to $hunger + 10)
 (set: $temp2 to $health + 5)
+
+&lt;img src=&quot;media/pic1.jpg&quot; alt=&quot;pic1&quot; class=&quot;scenePic&quot;&gt;
 
 &lt;week&gt;Week 1&lt;/week&gt;
 
@@ -725,6 +785,8 @@ You give a slight nod as he places his thumb on your forehead, and your vision f
 
 [[Wake up-&gt;AliStart]]
 
+&lt;img src=&quot;media/pic1.jpg&quot; alt=&quot;pic1&quot; class=&quot;scenePic&quot;&gt;
+
 &lt;week&gt;Week 1&lt;/week&gt;
 
 &lt;hunger&gt;&lt;img src=&quot;hungerIcon.png&quot; style=&quot;width:3vw&quot;;&gt;:$hunger%&lt;/hunger&gt;
@@ -736,6 +798,8 @@ You give a slight nod as he places his thumb on your forehead, and your vision f
 You nod in approval as he places his thumb on your forehead once more. Your vision fades to black.
 
 [[Wake up-&gt;AliStart]] 
+
+&lt;img src=&quot;media/pic1.jpg&quot; alt=&quot;pic1&quot; class=&quot;scenePic&quot;&gt;
 
 &lt;week&gt;Week 1&lt;/week&gt;
 
@@ -752,6 +816,8 @@ You nod in approval as he places his thumb on your forehead once more. Your visi
 (set: $budget to 850)
 (set: $statChange to (transition:&quot;pulse&quot;))
 
+&lt;img src=&quot;media/pic1.jpg&quot; alt=&quot;pic1&quot; class=&quot;scenePic&quot;&gt;
+
 &lt;week&gt;Week 2&lt;/week&gt;
 
 &lt;hunger&gt;&lt;img src=&quot;hungerIcon.png&quot; style=&quot;width:3vw&quot;;&gt;$statChange[:$hunger%]&lt;/hunger&gt;
@@ -761,6 +827,8 @@ You nod in approval as he places his thumb on your forehead once more. Your visi
 &lt;budget&gt;$statChange[Budget: $**$budget**]&lt;/budget&gt;</tw-passagedata><tw-passagedata pid="37" name="JessExpl" tags="" position="699.6666666666666,2372" size="100,100">&quot;And why do you feel that way? Is there anything I can do to help?&quot; he pressed further.
 
 [[I can&#39;t focus if I&#39;m hungry everyday-&gt;Jess8]]
+
+&lt;img src=&quot;media/pic1.jpg&quot; alt=&quot;pic1&quot; class=&quot;scenePic&quot;&gt;
 
 &lt;week&gt;Week 1&lt;/week&gt;
 
@@ -775,6 +843,8 @@ You nod in approval as he places his thumb on your forehead once more. Your visi
 [[Turn in the paper]]
 [[No time! Bolt to the car]]
 
+&lt;img src=&quot;media/pic1.jpg&quot; alt=&quot;pic1&quot; class=&quot;scenePic&quot;&gt;
+
 &lt;week&gt;Week 2&lt;/week&gt;
 
 &lt;hunger&gt;&lt;img src=&quot;hungerIcon.png&quot; style=&quot;width:3vw&quot;;&gt;:$hunger%&lt;/hunger&gt;
@@ -787,6 +857,8 @@ You show up half an hour late to pick up your children. They seem exhausted alre
 
 [[Time to go shopping (-$80)]] [[Pick up some drive-thru (-$40)]]
 
+&lt;img src=&quot;media/pic1.jpg&quot; alt=&quot;pic1&quot; class=&quot;scenePic&quot;&gt;
+
 &lt;week&gt;Week 2&lt;/week&gt;
 
 &lt;hunger&gt;&lt;img src=&quot;hungerIcon.png&quot; style=&quot;width:3vw&quot;;&gt;:$hunger%&lt;/hunger&gt;
@@ -798,6 +870,8 @@ You show up half an hour late to pick up your children. They seem exhausted alre
 Your kids seem exhausted by the time you swing around.
 
 [[Time to go shopping (-$80)]] [[Pick up some drive-thru (-$40)]] 
+
+&lt;img src=&quot;media/pic1.jpg&quot; alt=&quot;pic1&quot; class=&quot;scenePic&quot;&gt;
 
 &lt;week&gt;Week 2&lt;/week&gt;
 
@@ -812,6 +886,8 @@ You notice your son staring longingly at some pies.
 [[They could use a treat (+Health -$10)]] [[Doesn&#39;t look like we can afford it right now]]
 
 (set: $temp3 to $budget - 80)
+
+&lt;img src=&quot;media/pic1.jpg&quot; alt=&quot;pic1&quot; class=&quot;scenePic&quot;&gt;
 
 &lt;week&gt;Week 2&lt;/week&gt;
 
@@ -835,6 +911,8 @@ They still seem pretty exhausted, and start passing out soon after.
 (set: $temp1 to $hunger + 10)
 (set: $temp2 to $health - 10)
 (set: $temp3 to $budget - 40)
+
+&lt;img src=&quot;media/pic1.jpg&quot; alt=&quot;pic1&quot; class=&quot;scenePic&quot;&gt;
 
 &lt;week&gt;Week 2&lt;/week&gt;
 
@@ -871,6 +949,8 @@ They still seem pretty exhausted, and start passing out soon after.
 (set: $temp2 to $health + 5)
 (set: $temp3 to $budget - 10)
 
+&lt;img src=&quot;media/pic1.jpg&quot; alt=&quot;pic1&quot; class=&quot;scenePic&quot;&gt;
+
 &lt;week&gt;Week 2&lt;/week&gt;
 
 &lt;hunger&gt;&lt;img src=&quot;hungerIcon.png&quot; style=&quot;width:3vw&quot;;&gt;:$hunger%&lt;/hunger&gt;
@@ -895,6 +975,8 @@ They still seem pretty exhausted, and start passing out soon after.
 
 [[Head home and start cooking-&gt;Start cooking]]
 
+&lt;img src=&quot;media/pic1.jpg&quot; alt=&quot;pic1&quot; class=&quot;scenePic&quot;&gt;
+
 &lt;week&gt;Week 2&lt;/week&gt;
 
 &lt;hunger&gt;&lt;img src=&quot;hungerIcon.png&quot; style=&quot;width:3vw&quot;;&gt;:$hunger%&lt;/hunger&gt;
@@ -904,6 +986,8 @@ They still seem pretty exhausted, and start passing out soon after.
 &lt;budget&gt;Budget: $**$budget**&lt;/budget&gt;</tw-passagedata><tw-passagedata pid="45" name="Start cooking" tags="" position="1396,838" size="100,100">You start preparing dinner, but soon realize that there&#39;s only enough meat for 3 small portions. Your husband notices and claims he&#39;s not that hungry.
 
 [[Split it evenly (+Food +Health)]] [[Give it to your children (-Food -Health)]]
+
+&lt;img src=&quot;media/pic1.jpg&quot; alt=&quot;pic1&quot; class=&quot;scenePic&quot;&gt;
 
 &lt;week&gt;Week 2&lt;/week&gt;
 
@@ -917,6 +1001,8 @@ They still seem pretty exhausted, and start passing out soon after.
 
 (set: $temp1 to $hunger + 5)
 (set: $temp2 to $health + 5)
+
+&lt;img src=&quot;media/pic1.jpg&quot; alt=&quot;pic1&quot; class=&quot;scenePic&quot;&gt;
 
 &lt;week&gt;Week 2&lt;/week&gt;
 
@@ -946,6 +1032,8 @@ They still seem pretty exhausted, and start passing out soon after.
 (set: $temp1 to $hunger - 10)
 (set: $temp2 to $health - 5)
 
+&lt;img src=&quot;media/pic1.jpg&quot; alt=&quot;pic1&quot; class=&quot;scenePic&quot;&gt;
+
 &lt;week&gt;Week 2&lt;/week&gt;
 
 &lt;hunger&gt;&lt;img src=&quot;hungerIcon.png&quot; style=&quot;width:3vw&quot;;&gt;:|stat1&gt;[$hunger]%&lt;font color=&quot;red&quot;&gt;|change1&gt;[-10%]&lt;/font&gt;&lt;/hunger&gt;
@@ -971,6 +1059,8 @@ They still seem pretty exhausted, and start passing out soon after.
 
 [[Order a replacement (-$600)]] [[Throw out spoiled food (-Food -Health)]]
 
+&lt;img src=&quot;media/pic1.jpg&quot; alt=&quot;pic1&quot; class=&quot;scenePic&quot;&gt;
+
 &lt;week&gt;Week 2&lt;/week&gt;
 
 &lt;hunger&gt;&lt;img src=&quot;hungerIcon.png&quot; style=&quot;width:3vw&quot;;&gt;:$hunger%&lt;/hunger&gt;
@@ -982,6 +1072,8 @@ They still seem pretty exhausted, and start passing out soon after.
 [[Nice save-&gt;Ali2]]
 
 (set: $temp3 to $budget - 600)
+
+&lt;img src=&quot;media/pic1.jpg&quot; alt=&quot;pic1&quot; class=&quot;scenePic&quot;&gt;
 
 &lt;week&gt;Week 2&lt;/week&gt;
 
@@ -1005,6 +1097,8 @@ Guide Whispers: 40% of food in San Diego goes to waste.
 (set: $health to it - 10)
 (set: $hunger to it - 10)
 
+&lt;img src=&quot;media/pic1.jpg&quot; alt=&quot;pic1&quot; class=&quot;scenePic&quot;&gt;
+
 &lt;week&gt;Week 2&lt;/week&gt;
 
 &lt;hunger&gt;&lt;img src=&quot;hungerIcon.png&quot; style=&quot;width:3vw&quot;;&gt;:$hunger%&lt;/hunger&gt;
@@ -1017,6 +1111,8 @@ To make things worse your tuition is due soon.
 
 [[Shell out for tuition (-$700)]]
 [[Take the semester off]]
+
+&lt;img src=&quot;media/pic1.jpg&quot; alt=&quot;pic1&quot; class=&quot;scenePic&quot;&gt;
 
 &lt;week&gt;Week 2&lt;/week&gt;
 
@@ -1043,6 +1139,8 @@ To make things worse your tuition is due soon.
 [[Back-&gt;Ali2]]
 ]
 
+&lt;img src=&quot;media/pic1.jpg&quot; alt=&quot;pic1&quot; class=&quot;scenePic&quot;&gt;
+
 &lt;week&gt;Week 2&lt;/week&gt;
 
 &lt;hunger&gt;&lt;img src=&quot;hungerIcon.png&quot; style=&quot;width:3vw&quot;;&gt;:$hunger%&lt;/hunger&gt;
@@ -1053,6 +1151,8 @@ To make things worse your tuition is due soon.
 [[Better find a part time job-&gt;Ali3]]
 
 Guide Whispers: Many Americans also need to choose between education and providing for their families
+
+&lt;img src=&quot;media/pic1.jpg&quot; alt=&quot;pic1&quot; class=&quot;scenePic&quot;&gt;
 
 &lt;week&gt;Week 2&lt;/week&gt;
 
@@ -1065,6 +1165,8 @@ Your puzzled look makes him laugh and ask if you&#39;re feeling alright.
 
 [[Guide, what&#39;s he talking about?]]
 
+&lt;img src=&quot;media/pic1.jpg&quot; alt=&quot;pic1&quot; class=&quot;scenePic&quot;&gt;
+
 &lt;week&gt;Week 2&lt;/week&gt;
 
 &lt;hunger&gt;&lt;img src=&quot;hungerIcon.png&quot; style=&quot;width:3vw&quot;;&gt;:$hunger%&lt;/hunger&gt;
@@ -1074,6 +1176,8 @@ Your puzzled look makes him laugh and ask if you&#39;re feeling alright.
 &lt;budget&gt;Budget: $**$budget**&lt;/budget&gt;</tw-passagedata><tw-passagedata pid="55" name="Guide, what&#39;s he talking about?" tags="" position="1405,1790" size="100,100">&quot;He means the Feeding San Diego food distribution. Like the School Pantry Jessica went to, but spread along **264 locations**,&quot; the Guide explains.
 
 [[But they&#39;re still at risk?]]
+
+&lt;img src=&quot;media/pic1.jpg&quot; alt=&quot;pic1&quot; class=&quot;scenePic&quot;&gt;
 
 &lt;week&gt;Week 2&lt;/week&gt;
 
@@ -1087,6 +1191,8 @@ Your puzzled look makes him laugh and ask if you&#39;re feeling alright.
 
 [[Well that&#39;s just depressing]]
 
+&lt;img src=&quot;media/pic1.jpg&quot; alt=&quot;pic1&quot; class=&quot;scenePic&quot;&gt;
+
 &lt;week&gt;Week 2&lt;/week&gt;
 
 &lt;hunger&gt;&lt;img src=&quot;hungerIcon.png&quot; style=&quot;width:3vw&quot;;&gt;:$hunger%&lt;/hunger&gt;
@@ -1099,6 +1205,8 @@ You make a mental note to &lt;a href=&quot;https://feedingsandiego.org/need-help
 
 [[Get gas and check it out (-$20)]]
 
+&lt;img src=&quot;media/pic1.jpg&quot; alt=&quot;pic1&quot; class=&quot;scenePic&quot;&gt;
+
 &lt;week&gt;Week 2&lt;/week&gt;
 
 &lt;hunger&gt;&lt;img src=&quot;hungerIcon.png&quot; style=&quot;width:3vw&quot;;&gt;:$hunger%&lt;/hunger&gt;
@@ -1110,6 +1218,8 @@ You make a mental note to &lt;a href=&quot;https://feedingsandiego.org/need-help
 [[Take your pick for the week]]
 
 (set: $temp3 to $budget - 20)
+
+&lt;img src=&quot;media/pic1.jpg&quot; alt=&quot;pic1&quot; class=&quot;scenePic&quot;&gt;
 
 &lt;week&gt;Week 2&lt;/week&gt;
 
@@ -1130,6 +1240,8 @@ Guide Whispers: 14,000 volunteers donate their time to help end hunger.
 
 [[(either:&quot;Potatoes&quot;,&quot;Yams&quot;)-&gt;Ali4]] [[(either:&quot;Tomatoes&quot;,&quot;Spinach&quot;)-&gt;Ali4]]
 
+&lt;img src=&quot;media/pic1.jpg&quot; alt=&quot;pic1&quot; class=&quot;scenePic&quot;&gt;
+
 &lt;week&gt;Week 2&lt;/week&gt;
 
 &lt;hunger&gt;&lt;img src=&quot;hungerIcon.png&quot; style=&quot;width:3vw&quot;;&gt;:$hunger%&lt;/hunger&gt;
@@ -1144,6 +1256,8 @@ Guide Whispers: Partnerships with more than 240 retailers and 204 Starbucks stor
 
 (set: $temp1 to $hunger +10)
 (set: $temp2 to $health +10)
+
+&lt;img src=&quot;media/pic1.jpg&quot; alt=&quot;pic1&quot; class=&quot;scenePic&quot;&gt;
 
 &lt;week&gt;Week 2&lt;/week&gt;
 
@@ -1173,6 +1287,8 @@ Guide Whispers: Partnerships with more than 240 retailers and 204 Starbucks stor
 (set: $temp1 to $hunger +10)
 (set: $temp2 to $health +10)
 
+&lt;img src=&quot;media/pic1.jpg&quot; alt=&quot;pic1&quot; class=&quot;scenePic&quot;&gt;
+
 &lt;week&gt;Week 2&lt;/week&gt;
 
 &lt;hunger&gt;&lt;img src=&quot;hungerIcon.png&quot; style=&quot;width:3vw&quot;;&gt;:|stat1&gt;[$hunger]%&lt;font color=&quot;green&quot;&gt;|change1&gt;[+10%]&lt;/font&gt;&lt;/hunger&gt;
@@ -1194,12 +1310,14 @@ Guide Whispers: Partnerships with more than 240 retailers and 204 Starbucks stor
 	(if: $health is $temp2)[(stop:)]
 	(replace: ?stat2)[$health]
 ]
-(live: 2s)[(replace: ?change2)[](stop:)]</tw-passagedata><tw-passagedata pid="62" name="Ali6" tags="" position="1405,2707" size="100,100">The next day, you head back to the library, fresh salad in hand. A white-suited figure occupies your usual seat, skimming through a nutrition textbook.
+(live: 2s)[(replace: ?change2)[](stop:)]</tw-passagedata><tw-passagedata pid="62" name="Ali6" tags="" position="1405,2707" size="100,100">The next day, you head back to the library, fresh salad in hand. A familiar cargo-shorted figure occupies your usual seat, skimming through a nutrition textbook.
 
 [[&quot;It&#39;s time then?&quot;-&gt;Ali7]] [[&quot;Was wondering when you&#39;d show up again&quot;-&gt;Ali7]]
 
 (set: $temp1 to $hunger +10)
 (set: $temp2 to $health +10)
+
+&lt;img src=&quot;media/pic1.jpg&quot; alt=&quot;pic1&quot; class=&quot;scenePic&quot;&gt;
 
 &lt;week&gt;Week 2&lt;/week&gt;
 
@@ -1226,6 +1344,8 @@ Guide Whispers: Partnerships with more than 240 retailers and 204 Starbucks stor
 
 [[&quot;Harold... Harold!&quot;-&gt;Harold1]]
 
+&lt;img src=&quot;media/pic1.jpg&quot; alt=&quot;pic1&quot; class=&quot;scenePic&quot;&gt;
+
 &lt;week&gt;Week 2&lt;/week&gt;
 
 &lt;hunger&gt;&lt;img src=&quot;hungerIcon.png&quot; style=&quot;width:3vw&quot;;&gt;:$hunger%&lt;/hunger&gt;
@@ -1241,6 +1361,8 @@ Guide Whispers: Partnerships with more than 240 retailers and 204 Starbucks stor
 (set: $budget to 100)
 (set: $statChange to (transition:&quot;pulse&quot;))
 
+&lt;img src=&quot;media/pic1.jpg&quot; alt=&quot;pic1&quot; class=&quot;scenePic&quot;&gt;
+
 &lt;week&gt;Week 3&lt;/week&gt;
 
 &lt;hunger&gt;&lt;img src=&quot;hungerIcon.png&quot; style=&quot;width:3vw&quot;;&gt;$statChange[:$hunger%]&lt;/hunger&gt;
@@ -1252,6 +1374,8 @@ Guide Whispers: Partnerships with more than 240 retailers and 204 Starbucks stor
 You know, you should probably tell Ben you&#39;re okay - you&#39;ve been staring at the ceiling for a while.
 
 [[&quot;Ben?&quot;]]
+
+&lt;img src=&quot;media/pic1.jpg&quot; alt=&quot;pic1&quot; class=&quot;scenePic&quot;&gt;
 
 &lt;week&gt;Week 3&lt;/week&gt;
 
@@ -1265,6 +1389,8 @@ You know, you should probably tell Ben you&#39;re okay - you&#39;ve been staring
 
 [[&quot;Ugh. What happened?&quot;]]
 
+&lt;img src=&quot;media/pic1.jpg&quot; alt=&quot;pic1&quot; class=&quot;scenePic&quot;&gt;
+
 &lt;week&gt;Week 3&lt;/week&gt;
 
 &lt;hunger&gt;&lt;img src=&quot;hungerIcon.png&quot; style=&quot;width:3vw&quot;;&gt;:$hunger%&lt;/hunger&gt;
@@ -1276,6 +1402,8 @@ You know, you should probably tell Ben you&#39;re okay - you&#39;ve been staring
 He hands you one of those strawberry hard candies you always see around.
 
 [[Take it (+Food +Health)]] [[Refuse (-Food -Health)]]
+
+&lt;img src=&quot;media/pic1.jpg&quot; alt=&quot;pic1&quot; class=&quot;scenePic&quot;&gt;
 
 &lt;week&gt;Week 3&lt;/week&gt;
 
@@ -1289,6 +1417,8 @@ He hands you one of those strawberry hard candies you always see around.
 
 (set: $temp1 to $hunger + 2)
 (set: $temp2 to $health + 5)
+
+&lt;img src=&quot;media/pic1.jpg&quot; alt=&quot;pic1&quot; class=&quot;scenePic&quot;&gt;
 
 &lt;week&gt;Week 3&lt;/week&gt;
 
@@ -1320,6 +1450,8 @@ You can&#39;t seem to put much weight on your ankle, must&#39;ve twisted it in t
 (set: $temp1 to $hunger - 5)
 (set: $temp2 to $health - 5)
 
+&lt;img src=&quot;media/pic1.jpg&quot; alt=&quot;pic1&quot; class=&quot;scenePic&quot;&gt;
+
 &lt;week&gt;Week 3&lt;/week&gt;
 
 &lt;hunger&gt;&lt;img src=&quot;hungerIcon.png&quot; style=&quot;width:3vw&quot;;&gt;:|stat1&gt;[$hunger]%&lt;font color=&quot;red&quot;&gt;|change1&gt;[-5%]&lt;/font&gt;&lt;/hunger&gt;
@@ -1347,6 +1479,8 @@ You can&#39;t seem to put much weight on your ankle, must&#39;ve twisted it in t
 
 [[Ben drops you off at your stop]]
 
+&lt;img src=&quot;media/pic1.jpg&quot; alt=&quot;pic1&quot; class=&quot;scenePic&quot;&gt;
+
 &lt;week&gt;Week 3&lt;/week&gt;
 
 &lt;hunger&gt;&lt;img src=&quot;hungerIcon.png&quot; style=&quot;width:3vw&quot;;&gt;:$hunger%&lt;/hunger&gt;
@@ -1358,6 +1492,8 @@ You can&#39;t seem to put much weight on your ankle, must&#39;ve twisted it in t
 You limp back to your one bedroom house, sparsely decorated with only a bed and a few of your most treasured items.
 
 [[What&#39;s for dinner?]]
+
+&lt;img src=&quot;media/pic1.jpg&quot; alt=&quot;pic1&quot; class=&quot;scenePic&quot;&gt;
 
 &lt;week&gt;Week 3&lt;/week&gt;
 
@@ -1371,6 +1507,8 @@ To make it worse, your teeth haven&#39;t been feeling well lately. Something sof
 
 [[Canned baked beans (+Food -Health)]] [[Canned soup (+Food -Health)]]
 
+&lt;img src=&quot;media/pic1.jpg&quot; alt=&quot;pic1&quot; class=&quot;scenePic&quot;&gt;
+
 &lt;week&gt;Week 3&lt;/week&gt;
 
 &lt;hunger&gt;&lt;img src=&quot;hungerIcon.png&quot; style=&quot;width:3vw&quot;;&gt;:$hunger%&lt;/hunger&gt;
@@ -1383,6 +1521,8 @@ To make it worse, your teeth haven&#39;t been feeling well lately. Something sof
 
 (set: $temp1 to $hunger + 5)
 (set: $temp2 to $health - 3)
+
+&lt;img src=&quot;media/pic1.jpg&quot; alt=&quot;pic1&quot; class=&quot;scenePic&quot;&gt;
 
 &lt;week&gt;Week 3&lt;/week&gt;
 
@@ -1412,6 +1552,8 @@ To make it worse, your teeth haven&#39;t been feeling well lately. Something sof
 (set: $temp1 to $hunger + 3)
 (set: $temp2 to $health - 2)
 
+&lt;img src=&quot;media/pic1.jpg&quot; alt=&quot;pic1&quot; class=&quot;scenePic&quot;&gt;
+
 &lt;week&gt;Week 3&lt;/week&gt;
 
 &lt;hunger&gt;&lt;img src=&quot;hungerIcon.png&quot; style=&quot;width:3vw&quot;;&gt;:|stat1&gt;[$hunger]%&lt;font color=&quot;green&quot;&gt;|change1&gt;[+3%]&lt;/font&gt;&lt;/hunger&gt;
@@ -1439,6 +1581,8 @@ To make it worse, your teeth haven&#39;t been feeling well lately. Something sof
 
 (set: $temp3 to $budget - 70)
 
+&lt;img src=&quot;media/pic1.jpg&quot; alt=&quot;pic1&quot; class=&quot;scenePic&quot;&gt;
+
 &lt;week&gt;Week 3&lt;/week&gt;
 
 &lt;hunger&gt;&lt;img src=&quot;hungerIcon.png&quot; style=&quot;width:3vw&quot;;&gt;:$hunger%&lt;/hunger&gt;
@@ -1456,6 +1600,8 @@ To make it worse, your teeth haven&#39;t been feeling well lately. Something sof
 
 [[You notice your gums bleeding]]
 
+&lt;img src=&quot;media/pic1.jpg&quot; alt=&quot;pic1&quot; class=&quot;scenePic&quot;&gt;
+
 &lt;week&gt;Week 3&lt;/week&gt;
 
 &lt;hunger&gt;&lt;img src=&quot;hungerIcon.png&quot; style=&quot;width:3vw&quot;;&gt;:$hunger%&lt;/hunger&gt;
@@ -1468,6 +1614,8 @@ It pains you to part with the final memento from those times.
 
 [[I change my mind-&gt;Skip the electricity]] [[I have to]]
 
+&lt;img src=&quot;media/pic1.jpg&quot; alt=&quot;pic1&quot; class=&quot;scenePic&quot;&gt;
+
 &lt;week&gt;Week 3&lt;/week&gt;
 
 &lt;hunger&gt;&lt;img src=&quot;hungerIcon.png&quot; style=&quot;width:3vw&quot;;&gt;:$hunger%&lt;/hunger&gt;
@@ -1477,6 +1625,8 @@ It pains you to part with the final memento from those times.
 &lt;budget&gt;Budget: $**$budget**&lt;/budget&gt;</tw-passagedata><tw-passagedata pid="78" name="I have to" tags="" position="1981,1598" size="100,100">You slip the photo out of the frame and set it on your nightstand. You pawn off the frame, which was just enough to cover utilities.
 
 [[You notice your gums bleeding]] 
+
+&lt;img src=&quot;media/pic1.jpg&quot; alt=&quot;pic1&quot; class=&quot;scenePic&quot;&gt;
 
 &lt;week&gt;Week 3&lt;/week&gt;
 
@@ -1489,6 +1639,8 @@ It pains you to part with the final memento from those times.
 [[Do the operation]] [[What good are teeth without food?-&gt;painkillers]]
 
 (set: $temp2 to $health - 5)
+
+&lt;img src=&quot;media/pic1.jpg&quot; alt=&quot;pic1&quot; class=&quot;scenePic&quot;&gt;
 
 &lt;week&gt;Week 3&lt;/week&gt;
 
@@ -1507,6 +1659,8 @@ It pains you to part with the final memento from those times.
 
 [[Buy medication (-Food -Health -$15)-&gt;painkillers]] 
 
+&lt;img src=&quot;media/pic1.jpg&quot; alt=&quot;pic1&quot; class=&quot;scenePic&quot;&gt;
+
 &lt;week&gt;Week 3&lt;/week&gt;
 
 &lt;hunger&gt;&lt;img src=&quot;hungerIcon.png&quot; style=&quot;width:3vw&quot;;&gt;:$hunger%&lt;/hunger&gt;
@@ -1520,6 +1674,8 @@ It pains you to part with the final memento from those times.
 (set: $temp1 to $hunger - 5)
 (set: $temp2 to $health - 5)
 (set: $temp3 to $budget - 15)
+
+&lt;img src=&quot;media/pic1.jpg&quot; alt=&quot;pic1&quot; class=&quot;scenePic&quot;&gt;
 
 &lt;week&gt;Week 3&lt;/week&gt;
 
@@ -1553,6 +1709,8 @@ It pains you to part with the final memento from those times.
 
 [[&quot;What are you doing here?&quot;]]
 
+&lt;img src=&quot;media/pic1.jpg&quot; alt=&quot;pic1&quot; class=&quot;scenePic&quot;&gt;
+
 &lt;week&gt;Week 3&lt;/week&gt;
 
 &lt;hunger&gt;&lt;img src=&quot;hungerIcon.png&quot; style=&quot;width:3vw&quot;;&gt;:$hunger%&lt;/hunger&gt;
@@ -1562,6 +1720,8 @@ It pains you to part with the final memento from those times.
 &lt;budget&gt;Budget: $**$budget**&lt;/budget&gt;</tw-passagedata><tw-passagedata pid="83" name="&quot;What are you doing here?&quot;" tags="" position="1915,2142" size="100,100">The Guide gives a pained glance. &quot;Not everyone gets a happy ending. I&#39;m here to take you home now, if you&#39;d like.&quot;
 
 [[&quot;You&#39;re just going to leave him like this?&quot;-&gt;Harold2]] [[&quot;Aren&#39;t we supposed to help?&quot;-&gt;Harold2]]
+
+&lt;img src=&quot;media/pic1.jpg&quot; alt=&quot;pic1&quot; class=&quot;scenePic&quot;&gt;
 
 &lt;week&gt;Week 3&lt;/week&gt;
 
@@ -1576,6 +1736,8 @@ The Guide starts beaming proudly. &quot;I knew you would get it soon enough!&quo
 
 [[&quot;...was that a test?&quot;]]
 
+&lt;img src=&quot;media/pic1.jpg&quot; alt=&quot;pic1&quot; class=&quot;scenePic&quot;&gt;
+
 &lt;week&gt;Week 3&lt;/week&gt;
 
 &lt;hunger&gt;&lt;img src=&quot;hungerIcon.png&quot; style=&quot;width:3vw&quot;;&gt;:$hunger%&lt;/hunger&gt;
@@ -1585,6 +1747,8 @@ The Guide starts beaming proudly. &quot;I knew you would get it soon enough!&quo
 &lt;budget&gt;Budget: $**$budget**&lt;/budget&gt;</tw-passagedata><tw-passagedata pid="85" name="&quot;...was that a test?&quot;" tags="" position="1913,2406" size="100,100">He points a gloved finger at the door. You turn to look as it rattles with frantic knocking. You look back and the Guide is nowhere to be found.
 
 [[Go see who it is]]
+
+&lt;img src=&quot;media/pic1.jpg&quot; alt=&quot;pic1&quot; class=&quot;scenePic&quot;&gt;
 
 &lt;week&gt;Week 3&lt;/week&gt;
 
@@ -1596,6 +1760,8 @@ The Guide starts beaming proudly. &quot;I knew you would get it soon enough!&quo
 
 [[Make a nice, soft lunch (++Food ++Health)]]
 
+
+&lt;img src=&quot;media/pic1.jpg&quot; alt=&quot;pic1&quot; class=&quot;scenePic&quot;&gt;
 
 &lt;week&gt;Week 3&lt;/week&gt;
 
@@ -1609,6 +1775,8 @@ The Guide starts beaming proudly. &quot;I knew you would get it soon enough!&quo
 
 (set: $temp1 to $hunger + 15)
 (set: $temp2 to $health + 15)
+
+&lt;img src=&quot;media/pic1.jpg&quot; alt=&quot;pic1&quot; class=&quot;scenePic&quot;&gt;
 
 &lt;week&gt;Week 3&lt;/week&gt;
 
@@ -1633,14 +1801,15 @@ The Guide starts beaming proudly. &quot;I knew you would get it soon enough!&quo
 ]
 (live: 2s)[(replace: ?change2)[](stop:)]</tw-passagedata><tw-passagedata pid="88" name="You open them..." tags="" position="1908,2775" size="100,100">...back at your apartment, lying on your trusty couch. You check the mirror. No Freaky Friday business. No Guide. Just you.
 
-As you walk back to your living room, you notice a small note next to your leftovers. The leftovers that would&#39;ve helped so many.
+As you walk back to your living room, you notice a small note next to your leftovers. The leftovers that could&#39;ve helped so many.
 
 -READ NOTE-
--LINK PAGE-
 
 (set: $health to 99)
 (set: $hunger to 99)
 (set: $budget to 2000)
+
+&lt;img src=&quot;media/pic1.jpg&quot; alt=&quot;pic1&quot; class=&quot;scenePic&quot;&gt;
 
 &lt;week&gt;Week 0&lt;/week&gt;
 
@@ -1666,6 +1835,14 @@ The choices you make in Hunger to Health are choices **real** individuals have t
 
 [[Let&#39;s look at the basics-&gt;Tutorial2]]
 
+&lt;week&gt;&lt;/week&gt;
+
+&lt;hunger&gt;&lt;/hunger&gt;
+
+&lt;health&gt;&lt;/health&gt;
+
+&lt;budget&gt;&lt;/budget&gt;
+
 &lt;img src=&quot;media/pic1.jpg&quot; alt=&quot;pic1&quot; class=&quot;scenePic&quot;&gt;</tw-passagedata><tw-passagedata pid="91" name="Tutorial2" tags="" position="204.66666666666666,321.66666666666663" size="100,100">Your decisions will affect your Hunger, Health, and your Budget status displayed on the top bar.
 
 Tap the **&quot;Hunger&quot;** counter above to continue.
@@ -1674,11 +1851,11 @@ Tap the **&quot;Hunger&quot;** counter above to continue.
 
 &lt;hunger&gt;&lt;img src=&quot;hungerIcon.png&quot; style=&quot;width:3vw&quot;;&gt;[[:$hunger%-&gt;Tutorial3]]&lt;/hunger&gt;
 
-&lt;health&gt;&lt;img src=&quot;healthIcon.png&quot; style=&quot;width:3vw&quot;;&gt;: $health%&lt;/health&gt;
+&lt;health&gt;&lt;/health&gt;
 
-&lt;budget&gt;Budget: $**$budget**&lt;/budget&gt;
+&lt;budget&gt;&lt;/budget&gt;
 
-&lt;img src=&quot;media/pic1.jpg&quot; alt=&quot;pic1&quot; class=&quot;scenePic&quot;&gt;</tw-passagedata><tw-passagedata pid="92" name="Tutorial3" tags="" position="201.3333333333334,451.66666666666663" size="100,100">Sometimes the most frugal option isn&#39;t the healthiest.
+&lt;img src=&quot;media/child1.jpg&quot; alt=&quot;pic1&quot; class=&quot;scenePic&quot;&gt;</tw-passagedata><tw-passagedata pid="92" name="Tutorial3" tags="" position="201.3333333333334,451.66666666666663" size="100,100">Sometimes the most frugal option isn&#39;t the healthiest.
 
 Tap the **&quot;Health&quot;** counter above to continue.
 
@@ -1688,9 +1865,11 @@ Tap the **&quot;Health&quot;** counter above to continue.
 
 &lt;health&gt;&lt;img src=&quot;healthIcon.png&quot; style=&quot;width:3vw&quot;;&gt;[[:$health%&lt;/health&gt;-&gt;Tutorial4]]
 
-&lt;budget&gt;Budget: $**$budget**&lt;/budget&gt;
+&lt;budget&gt;&lt;/budget&gt;
 
-&lt;img src=&quot;media/pic1.jpg&quot; alt=&quot;pic1&quot; class=&quot;scenePic&quot;&gt;</tw-passagedata><tw-passagedata pid="93" name="Tutorial4" tags="" position="197.99999999999997,588.3333333333333" size="100,100">Your budget will determine what choices are available to you. Tap anywhere on the **&quot;Budget&quot;** bar above to begin the game.
+&lt;img src=&quot;media/fam1.jpg&quot; alt=&quot;pic1&quot; class=&quot;scenePic&quot;&gt;</tw-passagedata><tw-passagedata pid="93" name="Tutorial4" tags="" position="197.99999999999997,588.3333333333333" size="100,100">Your budget will determine what choices are available to you. 
+
+Tap anywhere on the **&quot;Budget&quot;** bar above to begin the game.
 
 &lt;!--Extra empty lines are to hide button container bug. Do not remove--&gt;
 
@@ -1715,7 +1894,7 @@ Tap the **&quot;Health&quot;** counter above to continue.
 
 [[&lt;budget&gt;Budget: $**$budget** ◄&lt;/budget&gt;-&gt;Intro]]
 
-&lt;img src=&quot;media/pic1.jpg&quot; alt=&quot;pic1&quot; class=&quot;scenePic&quot;&gt;</tw-passagedata></tw-storydata>
+&lt;img src=&quot;media/group1.jpg&quot; alt=&quot;pic1&quot; class=&quot;scenePic&quot;&gt;</tw-passagedata></tw-storydata>
 
 <script title="Twine engine code" data-main="harlowe">"use strict";function _defineProperty(e,t,n){return t in e?Object.defineProperty(e,t,{value:n,enumerable:!0,configurable:!0,writable:!0}):e[t]=n,e}function _toConsumableArray(e){if(Array.isArray(e)){for(var t=0,n=Array(e.length);t<e.length;t++)n[t]=e[t];return n}return Array.from(e)}var _slicedToArray=function(){function e(e,t){var n=[],r=!0,i=!1,o=void 0;try{for(var a,s=e[Symbol.iterator]();!(r=(a=s.next()).done)&&(n.push(a.value),!t||n.length!==t);r=!0);}catch(e){i=!0,o=e}finally{try{!r&&s.return&&s.return()}finally{if(i)throw o}}return n}return function(t,n){if(Array.isArray(t))return t;if(Symbol.iterator in Object(t))return e(t,n);throw new TypeError("Invalid attempt to destructure non-iterable instance")}}(),_typeof="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(e){return typeof e}:function(e){return e&&"function"==typeof Symbol&&e.constructor===Symbol&&e!==Symbol.prototype?"symbol":typeof e};!function(){/**
  * @license almond 0.3.3 Copyright jQuery Foundation and other contributors.
