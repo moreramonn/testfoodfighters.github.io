@@ -192,7 +192,9 @@ blackScreen {
 }
 
 
+
 </style><script role="script" id="twine-user-script" type="text/twine-javascript">
+
 
 </script><tw-passagedata pid="1" name="Title" tags="" position="206,61" size="100,100">&lt;img src=&quot;h2h logo v2.png&quot; alt=&quot;Hunger to Health Logo&quot; class=&quot;title&quot;&gt;
 
@@ -202,7 +204,9 @@ blackScreen {
 (set: $health to 99)
 (set: $hunger to 99)
 (set: $budget to 2000)
-(set: $statChange to (transition:&quot;pulse&quot;))</tw-passagedata><tw-passagedata pid="2" name="Throw out tomorrow" tags="" position="118,869" size="100,100">That&#39;s a problem for future you to figure out. You plop on the couch and switch the channel over to a talk show.
+(set: $statChange to (transition:&quot;pulse&quot;))
+(set: $healthWh to &#39;&lt;img src=&quot;healthWhite.png&quot; style=&quot;width:1.3vw&quot;;&gt;&#39;)
+(set: $hungerWh to &#39;&lt;img src=&quot;hungerWhite.png&quot; style=&quot;width:1.3vw&quot;;&gt;&#39;)</tw-passagedata><tw-passagedata pid="2" name="Throw out tomorrow" tags="" position="118,869" size="100,100">That&#39;s a problem for future you to figure out. You plop on the couch and switch the channel over to a talk show.
 
 [[Just gonna rest my eyes for a bit-&gt;Intro2]]
 
@@ -350,9 +354,9 @@ You hear the snide giggling of children around you.
 
 &lt;health&gt;&lt;img src=&quot;healthIcon.png&quot; style=&quot;width:3vw&quot;;&gt;:$health%&lt;/health&gt;
 
-&lt;budget&gt;Budget: $**$budget**&lt;/budget&gt;</tw-passagedata><tw-passagedata pid="13" name="Jess5" tags="" position="848,777" size="100,100">You rummage through books and notes to find an old, dusty, half-eaten (either:&quot;candy bar&quot;,&quot;bag of chips&quot;).
+&lt;budget&gt;Budget: $**$budget**&lt;/budget&gt;</tw-passagedata><tw-passagedata pid="13" name="Jess5" tags="" position="848,772.0000000000001" size="100,100">You rummage through books and notes to find an old, dusty, half-eaten (either:&quot;candy bar&quot;,&quot;bag of chips&quot;).
 
-[[Eat it (+Food -Health)]] [[Not worth it]]
+[[Eat it +$hungerWh -$healthWh-&gt;Eat it]] [[Not worth it]]
 
 &lt;img src=&quot;media/backpack.JPG&quot; alt=&quot;pic1&quot; class=&quot;scenePic&quot;&gt;
 
@@ -362,7 +366,7 @@ You hear the snide giggling of children around you.
 
 &lt;health&gt;&lt;img src=&quot;healthIcon.png&quot; style=&quot;width:3vw&quot;;&gt;:$health%&lt;/health&gt;
 
-&lt;budget&gt;Budget: $**$budget**&lt;/budget&gt;</tw-passagedata><tw-passagedata pid="14" name="Eat it (+Food -Health)" tags="" position="763,927" size="100,100">You sate the rumbling in your stomach for a few minutes, but you feel a bit sick.
+&lt;budget&gt;Budget: $**$budget**&lt;/budget&gt;</tw-passagedata><tw-passagedata pid="14" name="Eat it" tags="" position="766.3333333333334,917" size="100,100">You sate the rumbling in your stomach for a few minutes, but you feel a bit sick.
 
 [[Turn your attention back to the lecture-&gt;Jess7]]
 
@@ -392,7 +396,7 @@ You hear the snide giggling of children around you.
 	(if: $health is $temp2)[(stop:)]
 	(replace: ?stat2)[$health]
 ]
-(live: 2s)[(replace: ?change2)[](stop:)]</tw-passagedata><tw-passagedata pid="15" name="Not worth it" tags="" position="923,927" size="100,100">That&#39;s not going to fill you up anyways - you&#39;ll just get hungrier later. Besides theres a grey spot you dont trust in there.
+(live: 2s)[(replace: ?change2)[](stop:)]</tw-passagedata><tw-passagedata pid="15" name="Not worth it" tags="" position="916.3333333333334,913.6666666666666" size="100,100">That&#39;s not going to fill you up anyways - you&#39;ll just get hungrier later. Besides theres a grey spot you dont trust in there.
 
 [[Back to History-&gt;Jess7]]
 
@@ -463,7 +467,7 @@ Let&#39;s try to keep your eyes on the board next class,&quot; she added as she 
 
 You start to wonder what your parents will eat when they come home.
 
-[[Leave half for them (-Food -Health)]] [[Eat your half (+Food -Health)]]
+[[Leave half for them -$hungerWh -$healthWh-&gt;Leave half for them]] [[Eat your half +$hungerWh -$healthWh-&gt;Eat your half]]
 
 &lt;img src=&quot;media/girl1.jpg&quot; alt=&quot;girl1&quot; class=&quot;scenePic&quot;&gt;
 
@@ -473,7 +477,7 @@ You start to wonder what your parents will eat when they come home.
 
 &lt;health&gt;&lt;img src=&quot;healthIcon.png&quot; style=&quot;width:3vw&quot;;&gt;:$health%&lt;/health&gt;
 
-&lt;budget&gt;Budget: $**$budget**&lt;/budget&gt;</tw-passagedata><tw-passagedata pid="21" name="Leave half for them (-Food -Health)" tags="" position="773,1719" size="100,100">They seem drained enough already, maybe this will help. You leave out a plate on the dinner table and put your sister to bed.
+&lt;budget&gt;Budget: $**$budget**&lt;/budget&gt;</tw-passagedata><tw-passagedata pid="21" name="Leave half for them" tags="" position="773,1719" size="100,100">They seem drained enough already, maybe this will help. You leave out a plate on the dinner table and put your sister to bed.
 
 [[Let&#39;s get some homework done]]
 
@@ -503,7 +507,7 @@ You start to wonder what your parents will eat when they come home.
 	(if: $health is $temp2)[(stop:)]
 	(replace: ?stat2)[$health]
 ]
-(live: 2s)[(replace: ?change2)[](stop:)]</tw-passagedata><tw-passagedata pid="22" name="Eat your half (+Food -Health)" tags="" position="923,1719" size="100,100">Hopefully they&#39;ll pick up something on the way back because your stomach can&#39;t handle any more budget cuts. You dig in and put your sister to bed.
+(live: 2s)[(replace: ?change2)[](stop:)]</tw-passagedata><tw-passagedata pid="22" name="Eat your half" tags="" position="923,1719" size="100,100">Hopefully they&#39;ll pick up something on the way back because your stomach can&#39;t handle any more budget cuts. You dig in and put your sister to bed.
 
 [[Let&#39;s get some homework done]] 
 
@@ -537,7 +541,7 @@ You start to wonder what your parents will eat when they come home.
 
 You think of something to take her mind off it.
 
-[[Play some games (-Health)]] [[Watch TV (-Health)]]
+[[Play some games -$healthWh-&gt;Play some games]] [[Watch TV -$healthWh-&gt;Watch TV]]
 
 &lt;img src=&quot;media/girl2.jpg&quot; alt=&quot;pic1&quot; class=&quot;scenePic&quot;&gt;
 
@@ -547,34 +551,9 @@ You think of something to take her mind off it.
 
 &lt;health&gt;&lt;img src=&quot;healthIcon.png&quot; style=&quot;width:3vw&quot;;&gt;:$health%&lt;/health&gt;
 
-&lt;budget&gt;Budget: $**$budget**&lt;/budget&gt;</tw-passagedata><tw-passagedata pid="24" name="Play some games (-Health)" tags="" position="771,2022" size="100,100">6 years old and already a ruthless Uno player. It seems to distract her long enough until she tires herself out. You carry her back to her room.
+&lt;budget&gt;Budget: $**$budget**&lt;/budget&gt;</tw-passagedata><tw-passagedata pid="24" name="Play some games" tags="" position="771,2022" size="100,100">6 years old and already a ruthless Uno player. It seems to distract her long enough until she tires herself out. You carry her back to her room.
 
-[[Go to bed (+Health)]]
-
-Guide Whispers: Remember what your teacher said about food insecurity? That number jumps up to **1 in 6** for children.
-
-(set: $temp2 to $health - 5)
-
-&lt;img src=&quot;media/girl2.jpg&quot; alt=&quot;pic1&quot; class=&quot;scenePic&quot;&gt;
-
-&lt;week&gt;Week 1&lt;/week&gt;
-
-&lt;hunger&gt;&lt;img src=&quot;hungerIcon.png&quot; style=&quot;width:3vw&quot;;&gt;:$hunger%&lt;/hunger&gt;
-
-&lt;health&gt;&lt;img src=&quot;healthIcon.png&quot; style=&quot;width:3vw&quot;;&gt;:|stat2&gt;[$health]%&lt;font color=&quot;red&quot;&gt;|change2&gt;[-5%]&lt;/font&gt;&lt;/health&gt;
-
-&lt;budget&gt;Budget: $**$budget**&lt;/budget&gt;
-
-&lt;!-- Animation loop for stats --&gt;
-
-(live: 100)[
-	(set: $health to it - 1)
-	(if: $health is $temp2)[(stop:)]
-	(replace: ?stat2)[$health]
-]
-(live: 2s)[(replace: ?change2)[](stop:)]</tw-passagedata><tw-passagedata pid="25" name="Watch TV (-Health)" tags="" position="921,2022" size="100,100">The babysitter&#39;s secret weapon: cartoons. After an hour she knocks out peacefully, and you carry her back to bed.
-
-[[Go to bed (+Health)]] 
+[[Go to bed +$healthWh-&gt;Go to bed]]
 
 Guide Whispers: Remember what your teacher said about food insecurity? That number jumps up to **1 in 6** for children.
 
@@ -597,7 +576,32 @@ Guide Whispers: Remember what your teacher said about food insecurity? That numb
 	(if: $health is $temp2)[(stop:)]
 	(replace: ?stat2)[$health]
 ]
-(live: 2s)[(replace: ?change2)[](stop:)]</tw-passagedata><tw-passagedata pid="26" name="Go to bed (+Health)" tags="" position="850,2152" size="100,100">You toss and turn, but have a hard time actually falling asleep. After counting enough sheep(and ways to cook them) to feed an army, you pass out, exhausted.
+(live: 2s)[(replace: ?change2)[](stop:)]</tw-passagedata><tw-passagedata pid="25" name="Watch TV" tags="" position="921,2022" size="100,100">The babysitter&#39;s secret weapon: cartoons. After an hour she knocks out peacefully, and you carry her back to bed.
+
+[[Go to bed +$healthWh-&gt;Go to bed]] 
+
+Guide Whispers: Remember what your teacher said about food insecurity? That number jumps up to **1 in 6** for children.
+
+(set: $temp2 to $health - 5)
+
+&lt;img src=&quot;media/girl2.jpg&quot; alt=&quot;pic1&quot; class=&quot;scenePic&quot;&gt;
+
+&lt;week&gt;Week 1&lt;/week&gt;
+
+&lt;hunger&gt;&lt;img src=&quot;hungerIcon.png&quot; style=&quot;width:3vw&quot;;&gt;:$hunger%&lt;/hunger&gt;
+
+&lt;health&gt;&lt;img src=&quot;healthIcon.png&quot; style=&quot;width:3vw&quot;;&gt;:|stat2&gt;[$health]%&lt;font color=&quot;red&quot;&gt;|change2&gt;[-5%]&lt;/font&gt;&lt;/health&gt;
+
+&lt;budget&gt;Budget: $**$budget**&lt;/budget&gt;
+
+&lt;!-- Animation loop for stats --&gt;
+
+(live: 100)[
+	(set: $health to it - 1)
+	(if: $health is $temp2)[(stop:)]
+	(replace: ?stat2)[$health]
+]
+(live: 2s)[(replace: ?change2)[](stop:)]</tw-passagedata><tw-passagedata pid="26" name="Go to bed" tags="" position="850,2152" size="100,100">You toss and turn, but have a hard time actually falling asleep. After counting enough sheep(and ways to cook them) to feed an army, you pass out, exhausted.
 
 [[ZZZ]]
 
@@ -637,7 +641,7 @@ Guide Whispers: Remember what your teacher said about food insecurity? That numb
 
 For the first time in a while, they ask what you would like for dinner.
 
-[[Chicken &amp; sweet potatoes (++Food ++Health)]] [[Egg &amp; veggie fried rice (++Food ++Health)]]
+[[Chicken &amp; sweet potatoes ++$hungerWh ++$healthWh-&gt;Chicken &amp; sweet potatoes]] [[Egg &amp; veggie fried rice ++$hungerWh ++$healthWh-&gt;Egg &amp; veggie fried rice]]
 
 &lt;img src=&quot;media/schoolPantry2.jpg&quot; alt=&quot;pic1&quot; class=&quot;scenePic&quot;&gt;
 
@@ -647,7 +651,7 @@ For the first time in a while, they ask what you would like for dinner.
 
 &lt;health&gt;&lt;img src=&quot;healthIcon.png&quot; style=&quot;width:3vw&quot;;&gt;:$health%&lt;/health&gt;
 
-&lt;budget&gt;Budget: $**$budget**&lt;/budget&gt;</tw-passagedata><tw-passagedata pid="29" name="Chicken &amp; sweet potatoes (++Food ++Health)" tags="" position="760,2780" size="100,100">Your whole family sits down for a nice dinner together, with plenty of leftovers for tomorrow. You feel rejuvenated and sleep on time for once.
+&lt;budget&gt;Budget: $**$budget**&lt;/budget&gt;</tw-passagedata><tw-passagedata pid="29" name="Chicken &amp; sweet potatoes" tags="" position="760,2780" size="100,100">Your whole family sits down for a nice dinner together, with plenty of leftovers for tomorrow. You feel rejuvenated and sleep on time for once.
 
 [[Good choice!]]
 
@@ -679,7 +683,7 @@ Guide Whispers: The School Pantry program has been implemented in more than 40 s
 	(if: $health is $temp2)[(stop:)]
 	(replace: ?stat2)[$health]
 ]
-(live: 2s)[(replace: ?change2)[](stop:)]</tw-passagedata><tw-passagedata pid="30" name="Egg &amp; veggie fried rice (++Food ++Health)" tags="" position="915,2776" size="100,100">Your whole family sits down for a nice dinner together, with plenty of leftovers for tomorrow. You feel rejuvenated and sleep on time for once.
+(live: 2s)[(replace: ?change2)[](stop:)]</tw-passagedata><tw-passagedata pid="30" name="Egg &amp; veggie fried rice" tags="" position="915,2774.3333333333335" size="100,100">Your whole family sits down for a nice dinner together, with plenty of leftovers for tomorrow. You feel rejuvenated and sleep on time for once.
 
 [[Good choice!]]
 
@@ -715,7 +719,7 @@ Guide Whispers: The School Pantry program has been implemented in more than 40 s
 
 Lets grab a snack from your bag.
 
-[[Apple slices (+Food +Health)-&gt;JessFinal]] [[Granola bar (+Food +Health)-&gt;JessFinal]]
+[[Apple slices +$hungerWh +$healthWh-&gt;JessFinal]] [[Granola bar +$hungerWh +$healthWh-&gt;JessFinal]]
 
 &lt;img src=&quot;media/backpack.JPG&quot; alt=&quot;pic1&quot; class=&quot;scenePic&quot;&gt;
 
@@ -855,11 +859,11 @@ You nod in approval as he places his thumb on your forehead once more. Your visi
 
 &lt;health&gt;&lt;img src=&quot;healthIcon.png&quot; style=&quot;width:3vw&quot;;&gt;:$health%&lt;/health&gt;
 
-&lt;budget&gt;Budget: $**$budget**&lt;/budget&gt;</tw-passagedata><tw-passagedata pid="39" name="Turn in the paper" tags="" position="1308,449" size="100,100">You rush over to the dropbox and submit the assignment. You can&#39;t take any chances with this class. 
+&lt;budget&gt;Budget: $**$budget**&lt;/budget&gt;</tw-passagedata><tw-passagedata pid="39" name="Turn in the paper" tags="" position="1308,452.3333333333333" size="100,100">You rush over to the dropbox and submit the assignment. You can&#39;t take any chances with this class. 
 
 You show up half an hour late to pick up your children. They seem exhausted already.
 
-[[Time to go shopping (-$80)]] [[Pick up some drive-thru (-$40)]]
+[[Time to go shopping -$80]] [[Pick up some drive-thru -$40]]
 
 &lt;img src=&quot;media/pic1.jpg&quot; alt=&quot;pic1&quot; class=&quot;scenePic&quot;&gt;
 
@@ -873,7 +877,7 @@ You show up half an hour late to pick up your children. They seem exhausted alre
 
 Your kids seem exhausted by the time you swing around.
 
-[[Time to go shopping (-$80)]] [[Pick up some drive-thru (-$40)]] 
+[[Time to go shopping -$80]] [[Pick up some drive-thru -$40]] 
 
 &lt;img src=&quot;media/pic1.jpg&quot; alt=&quot;pic1&quot; class=&quot;scenePic&quot;&gt;
 
@@ -883,11 +887,11 @@ Your kids seem exhausted by the time you swing around.
 
 &lt;health&gt;&lt;img src=&quot;healthIcon.png&quot; style=&quot;width:3vw&quot;;&gt;:$health%&lt;/health&gt;
 
-&lt;budget&gt;Budget: $**$budget**&lt;/budget&gt;</tw-passagedata><tw-passagedata pid="41" name="Time to go shopping (-$80)" tags="" position="1396,585" size="100,100">You scour the aisles for any &quot;sale&quot; or &quot;deal&quot; tags, and manage to stock up on rice, beans, and pasta.
+&lt;budget&gt;Budget: $**$budget**&lt;/budget&gt;</tw-passagedata><tw-passagedata pid="41" name="Time to go shopping -$80" tags="" position="1396,583.3333333333334" size="100,100">You scour the aisles for any &quot;sale&quot; or &quot;deal&quot; tags, and manage to stock up on rice, beans, and pasta.
 
 You notice your son staring longingly at some pies.
 
-[[They could use a treat (+Health -$10)]] [[Doesn&#39;t look like we can afford it right now]]
+[[They could use a treat +$healthWh -$10-&gt;They could use a treat]] [[Doesn&#39;t look like we can afford it right now]]
 
 (set: $temp3 to $budget - 80)
 
@@ -906,7 +910,7 @@ You notice your son staring longingly at some pies.
 	(if: $budget is $temp3)[(stop:)]
 	(replace: ?stat3)[$budget]
 ]
-(live: 2s)[(replace: ?change3)[](stop:)]</tw-passagedata><tw-passagedata pid="42" name="Pick up some drive-thru (-$40)" tags="" position="1581,1074" size="100,100">It&#39;s not the healthiest, but it&#39;ll get the kids full enough. You pick up some burgers and fries on the way home.
+(live: 2s)[(replace: ?change3)[](stop:)]</tw-passagedata><tw-passagedata pid="42" name="Pick up some drive-thru -$40" tags="" position="1581,1074" size="100,100">It&#39;s not the healthiest, but it&#39;ll get the kids full enough. You pick up some burgers and fries on the way home.
 
 They still seem pretty exhausted, and start passing out soon after.
 
@@ -946,7 +950,7 @@ They still seem pretty exhausted, and start passing out soon after.
 	(if: $budget is $temp3)[(stop:)]
 	(replace: ?stat3)[$budget]
 ]
-(live: 2s)[(replace: ?change3)[](stop:)]</tw-passagedata><tw-passagedata pid="43" name="They could use a treat (+Health -$10)" tags="" position="1323,705" size="100,100">Seeing your children happy is worth every penny. You pick up a fresh apple pie and head home.
+(live: 2s)[(replace: ?change3)[](stop:)]</tw-passagedata><tw-passagedata pid="43" name="They could use a treat" tags="" position="1323,705" size="100,100">Seeing your children happy is worth every penny. You pick up a fresh apple pie and head home.
 
 [[Start cooking]]
 
@@ -989,7 +993,7 @@ They still seem pretty exhausted, and start passing out soon after.
 
 &lt;budget&gt;Budget: $**$budget**&lt;/budget&gt;</tw-passagedata><tw-passagedata pid="45" name="Start cooking" tags="" position="1396,838" size="100,100">You start preparing dinner, but soon realize that there&#39;s only enough meat for 3 small portions. Your husband notices and claims he&#39;s not that hungry.
 
-[[Split it evenly (+Food +Health)]] [[Give it to your children (-Food -Health)]]
+[[Split it evenly +$hungerWh +$healthWh-&gt;Split it evenly]] [[Give it to your children -$hungerWh -$healthWh-&gt;Give it to your children]]
 
 &lt;img src=&quot;media/pic1.jpg&quot; alt=&quot;pic1&quot; class=&quot;scenePic&quot;&gt;
 
@@ -999,7 +1003,7 @@ They still seem pretty exhausted, and start passing out soon after.
 
 &lt;health&gt;&lt;img src=&quot;healthIcon.png&quot; style=&quot;width:3vw&quot;;&gt;:$health%&lt;/health&gt;
 
-&lt;budget&gt;Budget: $**$budget**&lt;/budget&gt;</tw-passagedata><tw-passagedata pid="46" name="Split it evenly (+Food +Health)" tags="" position="1323,952" size="100,100">Everyone could use a bite or two. Nobody is completely full tonight, but at least it was a well-rounded meal.
+&lt;budget&gt;Budget: $**$budget**&lt;/budget&gt;</tw-passagedata><tw-passagedata pid="46" name="Split it evenly" tags="" position="1323,950.3333333333334" size="100,100">Everyone could use a bite or two. Nobody is completely full tonight, but at least it was a well-rounded meal.
 
 [[Let&#39;s get everyone to bed]]
 
@@ -1029,7 +1033,7 @@ They still seem pretty exhausted, and start passing out soon after.
 	(if: $health is $temp2)[(stop:)]
 	(replace: ?stat2)[$health]
 ]
-(live: 2s)[(replace: ?change2)[](stop:)]</tw-passagedata><tw-passagedata pid="47" name="Give it to your children (-Food -Health)" tags="" position="1471,958" size="100,100">They&#39;re all still growing and they need it more. You&#39;ve skipped meals before, you can bear with it. 
+(live: 2s)[(replace: ?change2)[](stop:)]</tw-passagedata><tw-passagedata pid="47" name="Give it to your children" tags="" position="1471,958" size="100,100">They&#39;re all still growing and they need it more. You&#39;ve skipped meals before, you can bear with it. 
 
 [[Let&#39;s get everyone to bed]]
 
@@ -1061,7 +1065,7 @@ They still seem pretty exhausted, and start passing out soon after.
 ]
 (live: 2s)[(replace: ?change2)[](stop:)]</tw-passagedata><tw-passagedata pid="48" name="Let&#39;s get everyone to bed" tags="" position="1398,1073" size="100,100">One evening you return to find that a power surge has fried your fridge. Some of your food has already gone bad, with more to follow.
 
-[[Order a replacement (-$600)]] [[Throw out spoiled food (-Food -Health)]]
+[[Order a replacement -$600]] [[Throw out spoiled food -$hungerWh -$healthWh-&gt;Throw out spoiled food]]
 
 &lt;img src=&quot;media/pic1.jpg&quot; alt=&quot;pic1&quot; class=&quot;scenePic&quot;&gt;
 
@@ -1071,7 +1075,7 @@ They still seem pretty exhausted, and start passing out soon after.
 
 &lt;health&gt;&lt;img src=&quot;healthIcon.png&quot; style=&quot;width:3vw&quot;;&gt;:$health%&lt;/health&gt;
 
-&lt;budget&gt;Budget: $**$budget**&lt;/budget&gt;</tw-passagedata><tw-passagedata pid="49" name="Order a replacement (-$600)" tags="" position="1325,1217" size="100,100">You managed to save almost everything. The milk and eggs are off growing a bacteria colony in the trash though.
+&lt;budget&gt;Budget: $**$budget**&lt;/budget&gt;</tw-passagedata><tw-passagedata pid="49" name="Order a replacement -$600" tags="" position="1325,1217" size="100,100">You managed to save almost everything. The milk and eggs are off growing a bacteria colony in the trash though.
 
 [[Nice save-&gt;Ali2]]
 
@@ -1092,7 +1096,7 @@ They still seem pretty exhausted, and start passing out soon after.
 	(if: $budget is $temp3)[(stop:)]
 	(replace: ?stat3)[$budget]
 ]
-(live: 2s)[(replace: ?change3)[](stop:)]</tw-passagedata><tw-passagedata pid="50" name="Throw out spoiled food (-Food -Health)" tags="" position="1473,1223" size="100,100">You borrow a cooler and salvage as much as you can. You’re left with around a quarter of the total.
+(live: 2s)[(replace: ?change3)[](stop:)]</tw-passagedata><tw-passagedata pid="50" name="Throw out spoiled food" tags="" position="1473,1223" size="100,100">You borrow a cooler and salvage as much as you can. You’re left with around a quarter of the total.
 
 [[We&#39;ll just have to stretch out the rest-&gt;Ali2]]
 
@@ -1113,7 +1117,7 @@ Guide Whispers: 40% of food in San Diego goes to waste.
 
 To make things worse your tuition is due soon.
 
-[[Shell out for tuition (-$700)]]
+[[Shell out for tuition -$700]]
 [[Take the semester off]]
 
 &lt;img src=&quot;media/pic1.jpg&quot; alt=&quot;pic1&quot; class=&quot;scenePic&quot;&gt;
@@ -1124,7 +1128,7 @@ To make things worse your tuition is due soon.
 
 &lt;health&gt;&lt;img src=&quot;healthIcon.png&quot; style=&quot;width:3vw&quot;;&gt;:$health%&lt;/health&gt;
 
-&lt;budget&gt;Budget: $**$budget**&lt;/budget&gt;</tw-passagedata><tw-passagedata pid="52" name="Shell out for tuition (-$700)" tags="" position="1333,1503" size="100,100">(if: $budget &gt; 700)[The whole reason you&#39;re going back to school is to be able to provide for your family. Won&#39;t do any good if you don&#39;t graduate.
+&lt;budget&gt;Budget: $**$budget**&lt;/budget&gt;</tw-passagedata><tw-passagedata pid="52" name="Shell out for tuition -$700" tags="" position="1326.3333333333333,1503" size="100,100">(if: $budget &gt; 700)[The whole reason you&#39;re going back to school is to be able to provide for your family. Won&#39;t do any good if you don&#39;t graduate.
 
 [[You pay the monthly installment-&gt;Ali3]]
 (set: $temp3 to $budget - 700)
@@ -1207,7 +1211,7 @@ Your puzzled look makes him laugh and ask if you&#39;re feeling alright.
 
 You make a mental note to &lt;a href=&quot;https://feedingsandiego.org/need-help/food-distributions/&quot; target=&quot;_blank&quot;&gt;**check if there&#39;s a distribution near you**&lt;/a&gt; when you get back to your own life.
 
-[[Get gas and check it out (-$20)]]
+[[Get gas and check it out -$20]]
 
 &lt;img src=&quot;media/pic1.jpg&quot; alt=&quot;pic1&quot; class=&quot;scenePic&quot;&gt;
 
@@ -1217,7 +1221,7 @@ You make a mental note to &lt;a href=&quot;https://feedingsandiego.org/need-help
 
 &lt;health&gt;&lt;img src=&quot;healthIcon.png&quot; style=&quot;width:3vw&quot;;&gt;:$health%&lt;/health&gt;
 
-&lt;budget&gt;Budget: $**$budget**&lt;/budget&gt;</tw-passagedata><tw-passagedata pid="58" name="Get gas and check it out (-$20)" tags="" position="1406,2165" size="100,100">You arrive early, so you decide to chat with some volunteers and are surprised to learn that some have been helped by similar distributions in the past.
+&lt;budget&gt;Budget: $**$budget**&lt;/budget&gt;</tw-passagedata><tw-passagedata pid="58" name="Get gas and check it out -$20" tags="" position="1406,2165" size="100,100">You arrive early, so you decide to chat with some volunteers and are surprised to learn that some have been helped by similar distributions in the past.
 
 [[Take your pick for the week]]
 
@@ -1405,7 +1409,7 @@ You know, you should probably tell Ben you&#39;re okay - you&#39;ve been staring
 
 He hands you one of those strawberry hard candies you always see around.
 
-[[Take it (+Food +Health)]] [[Refuse (-Food -Health)]]
+[[Take it +$hungerWh +$healthWh-&gt;Take it]] [[Refuse -$hungerWh -$healthWh-&gt;Refuse]]
 
 &lt;img src=&quot;media/pic1.jpg&quot; alt=&quot;pic1&quot; class=&quot;scenePic&quot;&gt;
 
@@ -1415,7 +1419,7 @@ He hands you one of those strawberry hard candies you always see around.
 
 &lt;health&gt;&lt;img src=&quot;healthIcon.png&quot; style=&quot;width:3vw&quot;;&gt;:$health%&lt;/health&gt;
 
-&lt;budget&gt;Budget: $**$budget**&lt;/budget&gt;</tw-passagedata><tw-passagedata pid="68" name="Take it (+Food +Health)" tags="" position="1826,707" size="100,100">You pop it into your mouth and he helps you to your feet. You can&#39;t seem to put much weight on your ankle, must&#39;ve twisted it in the fall.
+&lt;budget&gt;Budget: $**$budget**&lt;/budget&gt;</tw-passagedata><tw-passagedata pid="68" name="Take it" tags="" position="1826,707" size="100,100">You pop it into your mouth and he helps you to your feet. You can&#39;t seem to put much weight on your ankle, must&#39;ve twisted it in the fall.
 
 [[&quot;Thanks.&quot;]]
 
@@ -1445,7 +1449,7 @@ He hands you one of those strawberry hard candies you always see around.
 	(if: $health is $temp2)[(stop:)]
 	(replace: ?stat2)[$health]
 ]
-(live: 2s)[(replace: ?change2)[](stop:)]</tw-passagedata><tw-passagedata pid="69" name="Refuse (-Food -Health)" tags="" position="1976,707" size="100,100">&quot;I&#39;m not having you drop on me again, at least take it,&quot; he interjected while slipping it into your front pocket and picking you up to your feet.
+(live: 2s)[(replace: ?change2)[](stop:)]</tw-passagedata><tw-passagedata pid="69" name="Refuse" tags="" position="1976,707" size="100,100">&quot;I&#39;m not having you drop on me again, at least take it,&quot; he interjected while slipping it into your front pocket and picking you up to your feet.
 
 You can&#39;t seem to put much weight on your ankle, must&#39;ve twisted it in the fall. 
 
@@ -1509,7 +1513,7 @@ You limp back to your one bedroom house, sparsely decorated with only a bed and 
 
 To make it worse, your teeth haven&#39;t been feeling well lately. Something soft tonight?
 
-[[Canned baked beans (+Food -Health)]] [[Canned soup (+Food -Health)]]
+[[Canned baked beans +$hungerWh -$healthWh-&gt;Canned baked beans]] [[Canned soup +$hungerWh -$healthWh-&gt;Canned soup]]
 
 &lt;img src=&quot;media/pic1.jpg&quot; alt=&quot;pic1&quot; class=&quot;scenePic&quot;&gt;
 
@@ -1519,7 +1523,7 @@ To make it worse, your teeth haven&#39;t been feeling well lately. Something sof
 
 &lt;health&gt;&lt;img src=&quot;healthIcon.png&quot; style=&quot;width:3vw&quot;;&gt;:$health%&lt;/health&gt;
 
-&lt;budget&gt;Budget: $**$budget**&lt;/budget&gt;</tw-passagedata><tw-passagedata pid="73" name="Canned baked beans (+Food -Health)" tags="" position="1830,1198" size="100,100">It ain&#39;t much but getting something fresh in a rural town with no way to drive around is tough enough already. 
+&lt;budget&gt;Budget: $**$budget**&lt;/budget&gt;</tw-passagedata><tw-passagedata pid="73" name="Canned baked beans" tags="" position="1830,1198" size="100,100">It ain&#39;t much but getting something fresh in a rural town with no way to drive around is tough enough already. 
 
 [[Let&#39;s try to get some shut-eye]]
 
@@ -1549,7 +1553,7 @@ To make it worse, your teeth haven&#39;t been feeling well lately. Something sof
 	(if: $health is $temp2)[(stop:)]
 	(replace: ?stat2)[$health]
 ]
-(live: 2s)[(replace: ?change2)[](stop:)]</tw-passagedata><tw-passagedata pid="74" name="Canned soup (+Food -Health)" tags="" position="1980,1198" size="100,100">It ain&#39;t much but getting something fresh in a rural town with no way to drive around is tough enough already. 
+(live: 2s)[(replace: ?change2)[](stop:)]</tw-passagedata><tw-passagedata pid="74" name="Canned soup" tags="" position="1980,1198" size="100,100">It ain&#39;t much but getting something fresh in a rural town with no way to drive around is tough enough already. 
 
 [[Let&#39;s try to get some shut-eye]]
 
@@ -1661,7 +1665,7 @@ It pains you to part with the final memento from those times.
 ]
 (live: 2s)[(replace: ?change2)[](stop:)]</tw-passagedata><tw-passagedata pid="80" name="Do the operation" tags="" position="1838,1885" size="100,100">Looks like you can&#39;t afford that right now. You should do something about that pain though.
 
-[[Buy medication (-Food -Health -$15)-&gt;painkillers]] 
+[[Buy medication -$hungerWh -$healthWh -$15-&gt;painkillers]] 
 
 &lt;img src=&quot;media/pic1.jpg&quot; alt=&quot;pic1&quot; class=&quot;scenePic&quot;&gt;
 
@@ -1762,7 +1766,7 @@ The Guide starts beaming proudly. &quot;I knew you would get it soon enough!&quo
 
 &lt;budget&gt;Budget: $**$budget**&lt;/budget&gt;</tw-passagedata><tw-passagedata pid="86" name="Go see who it is" tags="" position="1911,2530" size="100,100">Ben rushes in with good news. Feeding San Diego is setting up a Mobile Pantry closeby today. He helps you pick up some produce suitable for your teeth and sees you home.
 
-[[Make a nice, soft lunch (++Food ++Health)]]
+[[Make a nice, soft lunch ++$hungerWh ++$healthWh-&gt;Make a nice, soft lunch]]
 
 
 &lt;img src=&quot;media/pic1.jpg&quot; alt=&quot;pic1&quot; class=&quot;scenePic&quot;&gt;
@@ -1773,7 +1777,7 @@ The Guide starts beaming proudly. &quot;I knew you would get it soon enough!&quo
 
 &lt;health&gt;&lt;img src=&quot;healthIcon.png&quot; style=&quot;width:3vw&quot;;&gt;:$health%&lt;/health&gt;
 
-&lt;budget&gt;Budget: $**$budget**&lt;/budget&gt;</tw-passagedata><tw-passagedata pid="87" name="Make a nice, soft lunch (++Food ++Health)" tags="" position="1911,2655" size="100,100">You finish your meal and sit on your porch sipping some freshly squeezed lemonade. You close your eyes and enjoy the cool breeze.
+&lt;budget&gt;Budget: $**$budget**&lt;/budget&gt;</tw-passagedata><tw-passagedata pid="87" name="Make a nice, soft lunch" tags="" position="1911,2655" size="100,100">You finish your meal and sit on your porch sipping some freshly squeezed lemonade. You close your eyes and enjoy the cool breeze.
 
 [[You open them...]]
 
@@ -1807,7 +1811,7 @@ The Guide starts beaming proudly. &quot;I knew you would get it soon enough!&quo
 
 As you walk back to your living room, you notice a small note next to your leftovers. The leftovers that could&#39;ve helped so many.
 
-&lt;a href=&quot;https://feedingsandiego.org/get-involved/&quot; target=&quot;_blank&quot;&gt;-READ NOTE-&lt;/a&gt;
+(align: &quot;=&gt;&lt;=&quot;)[&lt;a href=&quot;https://feedingsandiego.org/get-involved/&quot; target=&quot;_blank&quot;&gt;[[READ NOTE]]&lt;/a&gt;]
 
 (set: $health to 99)
 (set: $hunger to 99)
@@ -1898,7 +1902,8 @@ Tap anywhere on the **&quot;Budget&quot;** bar above to begin the game.
 
 [[&lt;budget&gt;Budget: $**$budget** ◄&lt;/budget&gt;-&gt;Intro]]
 
-&lt;img src=&quot;media/group1.jpg&quot; alt=&quot;pic1&quot; class=&quot;scenePic&quot;&gt;</tw-passagedata></tw-storydata>
+&lt;img src=&quot;media/group1.jpg&quot; alt=&quot;pic1&quot; class=&quot;scenePic&quot;&gt;</tw-passagedata><tw-passagedata pid="94" name="READ NOTE" tags="" position="1908,2891.666666666667" size="100,100">&lt;img src=&quot;h2h logo v2.png&quot; alt=&quot;Hunger to Health Logo&quot; class=&quot;title&quot;&gt;
+[&lt;first&gt;[[PLAY AGAIN?-&gt;Intro]]&lt;/first&gt;]</tw-passagedata></tw-storydata>
 
 <script title="Twine engine code" data-main="harlowe">"use strict";function _defineProperty(e,t,n){return t in e?Object.defineProperty(e,t,{value:n,enumerable:!0,configurable:!0,writable:!0}):e[t]=n,e}function _toConsumableArray(e){if(Array.isArray(e)){for(var t=0,n=Array(e.length);t<e.length;t++)n[t]=e[t];return n}return Array.from(e)}var _slicedToArray=function(){function e(e,t){var n=[],r=!0,i=!1,o=void 0;try{for(var a,s=e[Symbol.iterator]();!(r=(a=s.next()).done)&&(n.push(a.value),!t||n.length!==t);r=!0);}catch(e){i=!0,o=e}finally{try{!r&&s.return&&s.return()}finally{if(i)throw o}}return n}return function(t,n){if(Array.isArray(t))return t;if(Symbol.iterator in Object(t))return e(t,n);throw new TypeError("Invalid attempt to destructure non-iterable instance")}}(),_typeof="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(e){return typeof e}:function(e){return e&&"function"==typeof Symbol&&e.constructor===Symbol&&e!==Symbol.prototype?"symbol":typeof e};!function(){/**
  * @license almond 0.3.3 Copyright jQuery Foundation and other contributors.
